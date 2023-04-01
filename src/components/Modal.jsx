@@ -23,7 +23,14 @@ const Modal = ({ setModal, animacionModal, setAnimacionModal,guardarGasto}) => {
             },3000)
             return
         }
-        guardarGasto([nombre,cantidad,categoria,generarId()])
+        const fecha=Date.now()
+        guardarGasto({nombre:nombre,cantidad:cantidad,fecha:fecha,categoria:categoria,id:generarId()})
+
+        setTimeout(() => {
+            setModal(false)
+        }, 300)
+        setAnimacionModal(false)
+
     }
     return (
         <div className='modal'>
@@ -36,8 +43,9 @@ const Modal = ({ setModal, animacionModal, setAnimacionModal,guardarGasto}) => {
                 className={`formulario ${animacionModal ? 'animar' : 'cerrar'}`}
                 onSubmit={handleAgregarGasto}
             >
-                {mensaje && <Mensaje tipo="error">{mensaje}</Mensaje>}
+                
                 <legend>Agregar un Gasto</legend>
+                {mensaje && <Mensaje tipo="error">{mensaje}</Mensaje>}
                 <div className='campo'>
                     <label htmlFor="nombre">Nombre o identificador</label>
                     <input

@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import Header from './components/Header'
+import ListadoGastos from './components/ListadoGastos'
 import Modal from './components/Modal'
 import iconoNuevoGasto from './images/nuevo-gasto.svg'
+
 
 Header
 function App() {
@@ -17,21 +19,34 @@ function App() {
     }, 200)
   }
   const guardarGasto = (gasto) => {
-    setGastos([...gastos,gasto])
+    setGastos([...gastos, gasto])
     console.log(gastos)
   }
   return (
-    <div className="App">
+    <div className={modal ? 'fijar' :''}>
       <Header
         presupuesto={presupuesto}
         setPresupuesto={setPresupuesto}
+        gastos={gastos}
         isValidPresupuesto={isValidPresupuesto}
         setIsValidPresupuesto={setIsValidPresupuesto}
       />
       {isValidPresupuesto && (
+        <>
+        <main>
+          <ListadoGastos
+            gastos={gastos}
+          />
+        </main>
         <div className='nuevo-gasto'>
-          <img src={iconoNuevoGasto} alt="" onClick={handleNuevoGasto} />
-        </div>)}
+          <img
+            src={iconoNuevoGasto}
+            alt=""
+            onClick={handleNuevoGasto} 
+          />
+        </div>
+        </>)
+        }
 
       {modal && (<Modal
         setModal={setModal}
