@@ -121,7 +121,7 @@ header h1 {
     }
 }
 .formulario input[type="submit"]:hover {
-    background-color: #042a67;
+    filter:brightness(115%);
     cursor: pointer;
 }
 
