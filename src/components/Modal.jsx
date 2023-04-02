@@ -50,7 +50,6 @@ const Modal = ({ setModal, animacionModal, setAnimacionModal,guardarGasto,editar
     }
     return (
         <div className='modal'>
-            <p>Mensaje en modal</p>
             <div className='cerrar-modal'>
                 <img src={iconoCerrarModal} alt="icono para cerrar modal" onClick={ocultarModal} />
             </div>
