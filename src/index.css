@@ -2,7 +2,7 @@
 :root {
      --color-main: #579BB1; 
     --blanco: #F9F5EB;
-    --gris-claro: #E4DCCF;
+    --gris-claro: #E1D7C6;
     --gris: #94a3b8;
     --gris-oscuro: #64748b;
     --negro: #000;
@@ -30,6 +30,7 @@ html {
 
 h1 {
     font-size: 4rem;
+    color: var(--gris-claro);
 }
 h2 {
     font-size: 3rem;
@@ -283,7 +284,7 @@ main {
     font-size: 2.4rem;
     /*color: var(--negro);*/
     /* color:#4ea93b; */
-    color: #002B5B;
+    color: #6B728E;
     font-weight: 900;
 }
 
