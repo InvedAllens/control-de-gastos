@@ -8,11 +8,11 @@ import { generarId } from './helpers'
 
 Header
 function App() {
-  const [presupuesto, setPresupuesto] = useState(Number)
+  const [presupuesto, setPresupuesto] = useState(`${Number(localStorage.getItem('presupuesto')) ?? 0}`)
   const [isValidPresupuesto, setIsValidPresupuesto] = useState(false)
   const [modal, setModal] = useState(false)
   const [animacionModal, setAnimacionModal] = useState(false)
-  const [gastos, setGastos] = useState([])
+  const [gastos, setGastos] = useState(localStorage.getItem('gastos') ? [...JSON.parse(localStorage.getItem('gastos'))] : [])
   const [editarGasto,setEditarGasto]=useState({})
 
   const handleNuevoGasto = () => {
@@ -47,6 +47,18 @@ function App() {
     setGastos(gastosActualizados)
     console.log(gastosActualizados)
   }
+  useEffect(()=>{
+    localStorage.setItem('presupuesto',presupuesto ?? 0)
+  },[presupuesto])
+  useEffect(()=>{
+    if(presupuesto>0){
+      setPresupuesto(Number(localStorage.getItem('presupuesto')))
+      setIsValidPresupuesto(true)
+    }
+  },[])
+  useEffect(()=>{
+      localStorage.setItem('gastos',JSON.stringify(gastos) )
+  },[gastos])
   return (
     <div className={modal ? 'fijar' :''}>
       <Header
