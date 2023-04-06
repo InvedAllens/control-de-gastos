@@ -147,7 +147,7 @@ header h1 {
 }
 .alerta.error {
     background-color: var(--blanco);
-    border-left: 5px solid #b91c1c;
+    border-left: 5px solid #EB455F;
     color: #EB455F;
 }
 /* .alerta.success {
@@ -212,7 +212,7 @@ header h1 {
 }
 .contenido-presupuesto p.negativo,
 .contenido-presupuesto p.negativo span {
-    color: red;
+    color: #EB455F;
 }
 .contenido-presupuesto span {
     font-weight: 900;
