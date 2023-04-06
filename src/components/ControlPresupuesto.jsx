@@ -34,7 +34,7 @@ const ControlPresupuesto = ({presupuesto,gastos}) => {
             text={`${porcentaje.toFixed(1)}% Gastado`} 
             styles={buildStyles(
                 {
-                    pathColor: `${porcentaje<75 ? '#579BB1': porcentaje>100 ?'#EB455F':'#FFFBAC'}`,
+                    pathColor: `${porcentaje<75 ? '#579BB1': porcentaje>100 ?'#EB455F':'#FFEF82'}`,
                     trailColor: '#579BB120',
                     textColor:'#579BB1'
                 }
