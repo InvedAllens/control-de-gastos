@@ -44,6 +44,9 @@ const ControlPresupuesto = ({presupuesto,gastos}) => {
         </CircularProgressbar>
         </div>
         <div className='contenido-presupuesto'>
+            <button className='reset-app '>
+                Resetear App
+            </button>
             <p><span>Presupuesto:</span>{formatearMoneda(presupuesto)}</p>
 
             <p className={disponible<0 ? 'negativo': null}><span>Disponible:</span>{formatearMoneda(disponible)}</p>
