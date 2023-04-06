@@ -76,6 +76,7 @@ function App() {
         gastos={gastos}
         isValidPresupuesto={isValidPresupuesto}
         setIsValidPresupuesto={setIsValidPresupuesto}
+        setGastos={setGastos}
       />
       {isValidPresupuesto && (
         <>
