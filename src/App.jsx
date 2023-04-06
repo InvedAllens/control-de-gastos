@@ -98,7 +98,7 @@ function App() {
         <div className='nuevo-gasto'>
           <img
             src={iconoNuevoGasto}
-            alt=""
+            alt="Icono Agregar Gasto"
             onClick={handleNuevoGasto} 
           />
         </div>

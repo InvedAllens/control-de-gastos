@@ -42,9 +42,9 @@ const ControlPresupuesto = ({presupuesto,gastos,setGastos,setPresupuesto,setIsVa
             text={`${porcentaje.toFixed(1)}% Gastado`} 
             styles={buildStyles(
                 {
-                    pathColor: `${porcentaje<80 ? '#579BB1': porcentaje>100 ?'#EB455F':'#FFEF82'}`,
+                    pathColor: `${porcentaje<85 ? '#579BB1': porcentaje>100 ?'#EB455F':'#FFEF82'}`,
                     trailColor: '#579BB120',
-                    textColor:'#579BB1'
+                    textColor:`${porcentaje >100 ?'#EB455F': '#579BB1'}`
                 }
                 
                 )}
