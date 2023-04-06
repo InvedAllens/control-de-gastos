@@ -220,7 +220,7 @@ header h1 {
 }
 .reset-app {
     border: none;
-    background-color: #db2777;
+    background-color: #EB455F;
     padding: 1rem;
     width: 100%;
     text-align: center;
@@ -232,7 +232,7 @@ header h1 {
     transition-duration: 300ms;
 }
 .reset-app:hover {
-    background-color: #c71465;
+    filter: brightness(115%);
     cursor: pointer;
 }
 
